@@ -5,6 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="chrome=1" />
       <meta name="description" content="Angularjs media : HTML5 Audio/Video player implementation using Angularjs" />
       <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
       <title>Angularjs HTML5 media player</title>
    </head>
    <body ng-app="audio">
@@ -33,7 +34,13 @@
             <p>Here's a basic implementation.</p>
             <div class="audio_holder" ng-repeat="audio in audios">
               <audio src="{{audio.url}}"></audio>
-              <ng-controls></ng-controls>
+              <ng-controls template="unstyled"></ng-controls>
+            </div>
+            <h3>Styled version</h3>
+            <p>Using the parameters listed above to style the controls</p>
+            <div class="audio_holder" ng-repeat="audio in audios">
+              <audio src="{{audio.url}}"></audio>
+              <ng-controls template="styled"></ng-controls>
             </div>
          </section>
       </div>

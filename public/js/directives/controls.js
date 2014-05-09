@@ -3,6 +3,8 @@ audioApp.directive('ngControls', function ($timeout) {
     restrict: 'E',
     link: function (scope, elm, attrs) {
 
+      scope.controlTpl = 'public/views/controls_'+attrs.template+'.html';
+
       scope.getControlText = function () {
         return scope.audio && scope.audio.inPlay ? "Pause" : "Play";
       }
@@ -40,9 +42,12 @@ audioApp.directive('ngControls', function ($timeout) {
           obj.audio.inPlay = true;
           $(obj.audio.dom).bind("timeupdate", scope.handler);
         }
+      }
 
+      scope.isAudioInPlay = function(){
+        return angular.isDefined(this.audio.inPlay) && this.audio.inPlay == true;
       }
     },
-    templateUrl: 'public/views/controls.html'
+    template: '<div ng-include="controlTpl"></div>'
   }
 })
