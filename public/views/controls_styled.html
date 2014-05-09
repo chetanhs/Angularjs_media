@@ -1,14 +1,14 @@
-<div class="media" style="border: 1px solid; box-shadow: 3px 3px 3px #888888; margin-bottom: 10px; padding: 10px; border-radius: 3px;">
-  <a class="pull-left" href="javascript:void(0)" ng-click="togglePlayState(this, $event)" style="font-size: 40px;">
-    <span class="glyphicon"  ng-class="{true: 'glyphicon-pause', false: 'glyphicon-play'}[isAudioInPlay()]" style="font-size: 24px;"></span>
+<div class="media">
+  <a class="pull-left icon" href="javascript:void(0)" ng-click="togglePlayState(this, $event)">
+    <span class="glyphicon" ng-class="{true: 'glyphicon-pause', false: 'glyphicon-play'}[isAudioInPlay()]"></span>
   </a>
   <div class="media-body">
     <h4 class="media-heading">
       <span ng-bind="audio.name"></span>
-      <span style="font-size: 12px; float: right; margin-right: 10px; margin-top: 2px;" ng-bind="audio.timeLeft"></span>
+      <span class="time-left" ng-bind="audio.timeLeft"></span>
     </h4>
-    <div class="progress" style="border: 1px solid grey;">
-      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{audio.playPos}};">
+    <div class="progress" ng-click="seek(this, $event)">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{audio.playPos}};" >
       </div>
     </div>
   </div>

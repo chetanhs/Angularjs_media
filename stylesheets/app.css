@@ -1,0 +1,4 @@
+.media {border: 1px solid; box-shadow: 3px 3px 3px #888888; margin-bottom: 10px; padding: 10px; border-radius: 3px;}
+.media .icon {font-size: 24px; margin-top: 15px;}
+.media .progress {border: 1px solid grey; border-radius: 0px; cursor: pointer;}
+.time-left {font-size: 12px; float: right; margin-right: 10px; margin-top: 2px;}
