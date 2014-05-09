@@ -5,11 +5,8 @@
 	<body ng-app="audio">
 		<div ng-controller="AudioCtrl">
 			<div class="audio_holder" ng-repeat="audio in audios">
-				<a href="javascript:void(0)" ng-click="togglePlayState(this, $event)" ng-bind="getControlText()"></a>
-				<span ng-bind="'Name: ' + audio.name"></span>
 				<audio src="{{audio.url}}"></audio>
-				<span ng-bind="'Played: ' + audio.playPos" ng-show="audio.playPos"></span>
-				<span ng-bind="'Time Left: ' + audio.timeLeft" ng-show="audio.timeLeft"></span>
+        <ng-controls></ng-controls>
 			</div>
 		</div>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
