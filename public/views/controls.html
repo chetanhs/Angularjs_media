@@ -1,0 +1,4 @@
+<a href="javascript:void(0)" ng-click="togglePlayState(this, $event)" ng-bind="getControlText()"></a>
+<span ng-bind="'Name: ' + audio.name"></span>
+<span ng-bind="'Played: ' + audio.playPos" ng-show="audio.playPos"></span>
+<span ng-bind="'Time Left: ' + audio.timeLeft" ng-show="audio.timeLeft"></span>
