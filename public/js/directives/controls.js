@@ -43,6 +43,6 @@ audioApp.directive('ngControls', function ($timeout) {
 
       }
     },
-    templateUrl: '/public/views/controls.html'
+    templateUrl: 'public/views/controls.html'
   }
 })
